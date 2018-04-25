@@ -1,7 +1,11 @@
-<h1>Blog post</h1>
+<h3 style="color:green;">Blog post</h3>
+<hr>
+<div>
 <% @posts.each do |post| %>
-   <div class="well">
-       <h3><%= post.title %></h3>
-       <p><%= post.body %></p>
-       <%= link_to "Read More", post_path(post), :class => 'btn btn-default' %>
+   <div style="border-left:6px solid red; background-color:#E5E7E9;" class="well">
+       <h2 style="color:#117A65;margin-left:40px;"><%= post.title %></h2>
+       <p style="margin-left:50px;"><%= post.body %></p>
+       <p style="margin-left:40px"> <%= link_to "Read More", post_path(post), :class => 'btn btn-default' %></p>
+     </div>
 <% end %>
+</div>
